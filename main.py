@@ -71,13 +71,12 @@ def colorization_using_optimization(gray, marked):
 
 if __name__ == '__main__':
 
-    gray = read_image('data/baby.bmp')
-    marked = read_image('data/baby_marked.bmp')
-    path = 'data/baby_output.bmp'
+    name = 'example3'
 
-    # gray = read_image('data/smiley.bmp')
-    # marked = read_image('data/smiley_marked.bmp')
-    # path = 'data/smiley_output.bmp'
+    gray = read_image('data/' + name + '.bmp')
+    marked = read_image('data/' + name + '_marked.bmp')
+    path = 'data/' + name + '_output.bmp'
+
     result = colorization_using_optimization(gray, marked)
     show_image(result)
     save_image(result, path)
